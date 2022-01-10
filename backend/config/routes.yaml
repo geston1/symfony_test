@@ -1,3 +1,2 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+  resource: ../src/Resource/config/routes/routes.yaml

@@ -1,0 +1,16 @@
+parameters:
+
+services:
+
+  #Repositories
+  user_repository:
+    class: App\Repository\UserRepository
+
+  #Services
+  auth:
+    class: App\Service\User\Auth
+    tags: ['user.auth']
+
+  #Commands
+  create_user:
+    class: App\Command\CreateUserCommand

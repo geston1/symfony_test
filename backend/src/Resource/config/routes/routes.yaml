@@ -1,0 +1,3 @@
+api:
+  resource: ./api.yaml
+  prefix: api
