@@ -1,3 +1,6 @@
 login:
   path: /login
-  controller: App\Controller\Api\LoginController::index
+
+me:
+  path: /me
+  controller: App\Controller\Api\UserController::index
