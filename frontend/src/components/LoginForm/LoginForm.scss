@@ -1,0 +1,52 @@
+$light_theme: #eee;
+$placeholder_color: #aaa;
+$text_color: #000;
+
+@mixin placeholderStyle{
+    font-family: Roboto !important;
+    
+    color: $placeholder_color !important;
+    -webkit-text-fill-color: $placeholder_color !important;
+}
+
+@mixin textStyle {
+    color: $text_color;
+}
+
+input
+{
+    @include textStyle;
+
+    outline: 0;
+    background-color: transparent !important;
+    border-bottom: 3px solid $light_theme;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    font-size: 20pt !important;
+
+    &:focus,
+    &:active
+    {
+        @include textStyle;
+        font-size: 20pt !important;
+    }
+
+    &:-webkit-autofill:focus, 
+    &:-webkit-autofill:active,
+    &:-webkit-autofill:hover
+    {
+        @include textStyle;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill::first-line
+    {
+        @include placeholderStyle;
+
+        -webkit-box-shadow: 0 0 0 30px white inset !important;
+        box-shadow: 0 0 0 30px white inset !important;
+        background-color: transparent !important;
+        background: white !important;
+    }
+}
