@@ -12,7 +12,7 @@ const login = (username: string, password: string): AppThunk => (dispatch: AppDi
 
 const logout = (): AppThunk => (dispatch: AppDispatch) => {
     localStorage.removeItem("token");
-    dispatch({type: LOGOUT})
+    dispatch({type: LOGOUT, token: undefined});
 }
 
 export {
